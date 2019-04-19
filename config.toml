@@ -1,0 +1,15 @@
+# The URL the site will be built for
+base_url = "https://example.com"
+title = "Example"
+
+generate_rss = true
+compile_sass = true
+
+highlight_code = true
+highlight_theme = "charcoal"
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[extra]
+# Put all your custom variables here

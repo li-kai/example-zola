@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}
+    <title>{{ config.title }}</title>
+    {% endblock title %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css"
+    />
+  </head>
+
+  <body>
+    <div>
+      {% block content %}
+      <div>
+        {% for page in section.pages | reverse %}
+        <div>
+          <h1>
+            <a href="{{ page.permalink }}">
+              {{ page.title }}
+            </a>
+          </h1>
+          <span>{{ page.date | date(format="%Y-%m-%d") }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endblock content %}
+    </div>
+  </body>
+</html>

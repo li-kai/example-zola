@@ -1,0 +1,6 @@
+[build]
+publish = "public"
+command = "./zola.sh build --base-url $URL"
+
+[context.deploy-preview]
+command = "./zola.sh build build --base-url $DEPLOY_PRIME_URL"
